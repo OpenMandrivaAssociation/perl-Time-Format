@@ -1,7 +1,7 @@
 
 %define module	Time-Format
 %define name	perl-%{module}
-%define version	1.09
+%define version	1.11
 %define rel	1
 
 Summary:	Perl module for date and time formatting
