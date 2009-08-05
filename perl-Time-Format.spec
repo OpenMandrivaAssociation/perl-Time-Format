@@ -1,20 +1,18 @@
+%define upstream_name	 Time-Format
+%define upstream_version 1.11
 
-%define module	Time-Format
-%define name	perl-%{module}
-%define version	1.11
-%define rel	1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl module for date and time formatting
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Time/%{module}-%{version}.tar.gz
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Time::Format provides a very easy way to format dates and times. The
@@ -23,7 +21,7 @@ inside strings as well as in ordinary expressions. The formatting
 codes used are meant to be easy to remember, use, and read. They
 follow a simple, consistent pattern. 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,5 +39,3 @@ rm -rf %{buildroot}
 %doc README Changes quickref.*
 %{perl_vendorlib}/Time
 %{_mandir}/man3/*
-
-
