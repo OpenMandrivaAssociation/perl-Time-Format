@@ -2,14 +2,14 @@
 %define upstream_version 1.11
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.12
+Release:	1
 
 Summary:	Perl module for date and time formatting
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Time/Time-Format-1.12.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -68,4 +68,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Sat Mar 17 2007 Anssi Hannula <anssi@mandriva.org> 1.02-1mdv2007.1
 + Revision: 145650
 - intial package release for Mandriva
+
 
