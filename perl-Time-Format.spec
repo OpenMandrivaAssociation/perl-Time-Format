@@ -1,6 +1,5 @@
 %define upstream_name	 Time-Format
-%define upstream_version 1.11
-
+%define upstream_version 1.12
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.12
 Release:	1
